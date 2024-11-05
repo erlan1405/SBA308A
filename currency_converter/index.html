@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Currency converter</h1>
+        <form id="converter-form">
+            <input type="number" id="amount" placeholder="Amount" required>
+            
+            <select id="from-currency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="RUB">RUB</option>
+                <option value="KGS">KGS</option>
+            </select>
+            
+            <span>to</span>
+            
+            <select id="to-currency">
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+                <option value="RUB">RUB</option>
+                <option value="KGS">KGS</option>
+            </select>
+            
+            <button type="submit">Convert</button>
+        </form>
+
+        <div id="result">
+            <p id="converted-amount"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
