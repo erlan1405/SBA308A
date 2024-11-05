@@ -9,3 +9,25 @@ async function fetchExchange() {
     const data = await response.json();
     return data.conversion_rates;
 }
+
+
+//function form processing and convertation
+document.getElementById('converter-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const amount = parseFloat(document.getElementById('amount').value);
+    const fromCurrency = document.getElementById('from-currency').value;
+    const toCurrency = document.getElementById('to-currency').value;
+
+    const rates = await fetchExchange();
+
+    //Check exhange rates on the list
+    if (rates[fromCurrency] && rates[toCurrency]) {
+        const convertedAmount = amount * (rates[toCurrency] / rates[fromCurrency]);
+
+        document.getElementById('converted-amount').innerHTML = `${convertedAmount.toFixed(2)} ${toCurrency}`;
+    } else {
+        document.getElementById('converted-amount').innerHTML = `Error: rates is not available`;
+    }
+
+});
