@@ -26,7 +26,7 @@ Clone the repository to your local machine:
 
 bash
 Copy code
-git clone https://github.com/erlan1405/SBA308A/currency-converter.git
+git clone https://github.com/erlan1405/SBA308A/currency_converter.git
 Navigate into the project directory:
 
 bash
