@@ -35,7 +35,7 @@ cd currency-converter
 Open the index.html file in your web browser to view the project.
 
 There are no external dependencies to install. Everything should work by simply opening the HTML file.
-____________________________________________________________________________________-
+____________________________________________________________________________________
 Usage
 Once the project is open in your browser, you can:
 
